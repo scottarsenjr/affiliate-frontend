@@ -6,7 +6,7 @@ export const store = configureStore({
         [carriersAPI.reducerPath]: carriersAPI.reducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(
-        carriersAPI.middleware
+        carriersAPI.middleware,
     ),
 })
 

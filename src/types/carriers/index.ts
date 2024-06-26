@@ -12,13 +12,13 @@ export interface ILimitOffsetPagination {
     offset?: number;
 }
 
-enum ECarrierFields {
-    carrier_id,
-    carrier_name,
-    country_name,
-    ecpc_recent,
-    updated_at,
-    on_record
+export enum ECarrierFields {
+    carrier_id = 'carrier_id',
+    carrier_name = 'carrier_name',
+    country_name = 'country_name',
+    ecpc_recent = 'ecpc_recent',
+    updated_at = 'updated_at',
+    on_record = 'on_record'
 }
 
 export interface ICarriersQueryParams extends ILimitOffsetPagination {

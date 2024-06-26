@@ -7,13 +7,14 @@ export const carriersAPI = createApi({
         baseUrl: import.meta.env.VITE_API_BASE_URL,
         credentials: 'include',
     }),
-    endpoints: (builder) => ({
-        fetchCarriers: builder.query<ICarrier[], ICarriersQueryParams | null>({
-            query: (params) => ({ url: 'affiliate/carriers/', params })
-        })
+    endpoints: (build) => ({
+        fetchCarriers: build.query<ICarrier[], ICarriersQueryParams>({
+            query: (params) => ({ url: 'affiliate/carriers/', params: params })
+        }),
     }),
 })
 
 export const {
-    useFetchCarriersQuery
+    useFetchCarriersQuery,
+    useLazyFetchCarriersQuery,
 } = carriersAPI;
