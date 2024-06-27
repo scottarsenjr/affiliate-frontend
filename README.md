@@ -5,3 +5,5 @@
 ```shell
 docker compose up --build
 ```
+
+Website available at http://localhost:5173
